@@ -16,18 +16,18 @@ class usdt_plugin
                 'note' => '确保地址正确，收款错误无法追回',
             ],
             'appkey' => [
-                'name' => '收款汇率（CNY）',
+                'name' => '交易汇率（CNY）',
                 'type' => 'input',
                 'note' => '如果填AUTO则实时获取市场汇率，推荐填AUTO；举例：6.3',
             ],
             'appurl' => [
-                'name' => '有效时长（秒）',
+                'name' => '超时时长（秒）',
                 'type' => 'input',
                 'note' => '建议20分钟；填：1200',
             ],
         ],
         'select'   => null,
-        'note'     => '监控：',
+        'note'     => '项目地址：<a href="https://github.com/v03413/epay_usdt">https://github.com/v03413/epay_usdt</a>',
     ];
 
     public static function submit()
@@ -51,7 +51,7 @@ class usdt_plugin
         header("application:text/html;charset=UTF-8");
 
         define('PLUGIN_PATH', PLUGIN_ROOT . PAY_PLUGIN . '/');
-        define('PLUGIN_STATIC', 'plugins/' . PAY_PLUGIN . '/static');
+        define('PLUGIN_STATIC', 'https://cdn.jsdelivr.net/gh/v03413/epay_usdt/static');
 
         require_once PLUGIN_PATH . '/pay.php';
 

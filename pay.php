@@ -64,19 +64,10 @@
     </div>
 </div>
 <script src="<?= PLUGIN_STATIC ?>/js/jquery.min.js"></script>
-<script src="//lib.baomitu.com/layer/3.1.1/layer.js"></script>
 <script src="<?= PLUGIN_STATIC ?>/js/clipboard.min.js"></script>
+<script src="<?php echo $cdnpublic ?>layer/3.1.1/layer.js"></script>
 <script src="<?php echo $cdnpublic ?>jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 <script>
-    $('#qrcode').qrcode({
-        text: "<?= $address; ?>",
-        width: 230,
-        height: 230,
-        foreground: "#000000",
-        background: "#ffffff",
-        typeNumber: -1
-    });
-
     // 检查是否支付完成
     function loadmsg() {
         $.ajax({
@@ -125,6 +116,15 @@
     }
 
     $(function () {
+        $('#qrcode').qrcode({
+            text: "<?= $address; ?>",
+            width: 230,
+            height: 230,
+            foreground: "#000000",
+            background: "#ffffff",
+            typeNumber: -1
+        });
+
         (new Clipboard('#usdt')).on('success', function (e) {
             layer.msg('金额复制成功');
         });
