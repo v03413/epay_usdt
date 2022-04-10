@@ -7,7 +7,7 @@ class usdt_plugin
         'name'     => 'usdt',
         'showname' => 'USDT 收款插件',
         'author'   => '莫名',
-        'link'     => 'https://qzone.work',
+        'link'     => 'https://qzone.work/codes/741.html',
         'types'    => ['alipay', 'qqpay', 'wxpay'],
         'inputs'   => [
             'appid'  => [
@@ -27,7 +27,7 @@ class usdt_plugin
             ],
         ],
         'select'   => null,
-        'note'     => '项目地址：<a href="https://github.com/v03413/epay_usdt">https://github.com/v03413/epay_usdt</a>',
+        'note'     => '',
     ];
 
     public static function submit()
