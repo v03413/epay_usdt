@@ -8,7 +8,7 @@ class usdt_plugin
         'showname' => 'USDT 收款插件',
         'author'   => '莫名',
         'link'     => 'https://qzone.work/codes/741.html',
-        'types'    => ['alipay', 'qqpay', 'wxpay'],
+        'types'    => ['usdt'],
         'inputs'   => [
             'appid'  => [
                 'name' => 'USDT-TRC20 收款地址',
