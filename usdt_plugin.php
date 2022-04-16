@@ -51,7 +51,7 @@ class usdt_plugin
         header("application:text/html;charset=UTF-8");
 
         define('PLUGIN_PATH', PLUGIN_ROOT . PAY_PLUGIN . '/');
-        define('PLUGIN_STATIC', 'https://cdn.jsdelivr.net/gh/v03413/epay_usdt/static');
+        define('PLUGIN_STATIC', 'https://cdn.vizan.cc/other/epay_usdt');
 
         require_once PLUGIN_PATH . '/pay.php';
 
