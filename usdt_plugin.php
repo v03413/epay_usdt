@@ -62,10 +62,9 @@ class usdt_plugin
     {
         global $channel;
 
-        $ret = $channel['appkey'];
-        if (is_float($ret) && $ret > 0) {
+        if (isset($channel['appkey']) && $channel['appkey'] > 0) {
 
-            return $ret;
+            return floatval($channel['appkey']);
         }
 
         $api    = 'https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/chart?id=825&range=1H&convertId=2787';
