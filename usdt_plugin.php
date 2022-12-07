@@ -39,8 +39,8 @@ class usdt_plugin
         $rate    = self::getRate();
         $usdt    = round($order['realmoney'] / $rate, 2);
         $expire  = date('Y-m-d H:i:s', strtotime($order['addtime']) - intval($channel['appurl']));;
-        $params = [$channel['id'], 0, $expire, $order['trade_no']];
-        $row    = $DB->getRow('select * from pre_order where channel = ? and status = ? and addtime >= ? and trade_no != ? order by param desc limit 1', $params);
+        $params = [$channel['id'], 0, $expire, $order['trade_no'], $order['money']];
+        $row    = $DB->getRow('select * from pre_order where channel = ? and status = ? and addtime >= ? and trade_no != ? and money = ? order by param desc limit 1', $params);
         if ($row) {
             $usdt = bcadd($row['param'], 0.01, 2);
         }
