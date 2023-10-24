@@ -1,5 +1,9 @@
 # epay_usdt
 
+**推荐您使用 [Bepusdt](https://github.com/v03413/bepusdt) 进行`USDT.TCO20`收款，一款更好用的个人USDT收款网关，易支付可以直接对接。**  
+
+---   
+
 ## 介绍
 
 一款适用于原版彩虹易支付的USDT（TRC20）收款插件，收到的货币直接到自己钱包，不经过任何第三方。
